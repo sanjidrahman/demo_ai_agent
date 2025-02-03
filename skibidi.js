@@ -80,6 +80,11 @@ async function sendMessage(phone_number_id, to, message) {
     }
 }
 
+app.get('/', (req, res) => {
+    res.send('Hi server of Demo_ai_agent');
+    console.log('Hit get url');
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
